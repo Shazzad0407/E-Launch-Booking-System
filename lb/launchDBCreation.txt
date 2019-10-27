@@ -1,0 +1,135 @@
+
+drop database if exists launchdb;
+create database launchdb;
+use launchdb;
+
+create table terminal(
+	terminal_id int NOT NULL AUTO_INCREMENT,
+	terminal_name varchar(100),
+	terminal_latitude varchar(200),
+	terminal_longitude varchar(200),
+	zip_code numeric(4,0) check (zip_code>0),
+	PRIMARY KEY (terminal_id)
+);
+create table launch (
+	launch_id varchar(50),
+	launch_name varchar(100),
+	reg_date date,
+	arrTime varchar(20),
+	depTime varchar(20),
+	low_price int,
+	high_price int,
+	capacity numeric(6,0) check (capacity > 0 ),
+	PRIMARY KEY (launch_id)
+);
+create table route (
+	terminal_id int NOT NULL AUTO_INCREMENT,
+	launch_id varchar(50),
+	PRIMARY KEY (terminal_id,launch_id),
+	FOREIGN KEY (terminal_id) REFERENCES terminal (terminal_id),
+	FOREIGN KEY (launch_id) REFERENCES launch (launch_id)
+);
+
+
+create table launch_img(
+	img_path varchar(100),
+	launch_id  varchar(50),
+	FOREIGN KEY (launch_id) REFERENCES launch(launch_id)
+);
+create table launch_pac(
+	img_path varchar(100),
+	launch_id  varchar(50),
+	FOREIGN KEY (launch_id) REFERENCES launch(launch_id)
+);
+
+create table passenger(
+	passenger_first_name varchar(100),
+	passenger_last_name varchar(100),
+	passenger_email varchar(100),
+	passenger_password varchar(50),
+	passenger_mobile_no int(15),
+	PRIMARY KEY (passenger_email)
+);
+
+
+create table cabin(
+	cabin_id int NOT NULL AUTO_INCREMENT,
+	cabin_type varchar(50),
+	ac_non varchar(10),
+	cabin_floor numeric(2,0) check (floor > 0),
+	cabin_cost numeric(6,2) check (cost > 0),
+	cabin_status varchar(10),
+	launch_id varchar(50),
+	PRIMARY KEY (cabin_id,launch_id),
+	FOREIGN KEY (launch_id) REFERENCES launch (launch_id)
+);
+
+create table cabin_img(
+	img_path varchar(100),
+	cabin_id int NOT NULL AUTO_INCREMENT,
+	launch_id varchar(50),
+	PRIMARY KEY (img_path,cabin_id),
+	FOREIGN KEY (launch_id) REFERENCES launch(launch_id),
+	FOREIGN KEY (cabin_id) REFERENCES cabin(cabin_id)
+	
+);
+
+create table schedule(
+	schedule_date date,
+	launch_id varchar (50),
+	start_terminal_id int , 
+	destination_terminal_id int ,
+	PRIMARY KEY (schedule_date,launch_id),
+	FOREIGN KEY (start_terminal_id) REFERENCES terminal (terminal_id),
+	FOREIGN KEY (destination_terminal_id) REFERENCES terminal (terminal_id)
+);
+
+
+create table booking(
+ 	booking_id varchar(100),
+	booking_date date,
+	schedule_date date,
+	launch_id varchar (50),
+	passenger_email varchar(50),
+	PRIMARY KEY (booking_id),
+	FOREIGN KEY (passenger_email) REFERENCES passenger (passenger_email),
+	FOREIGN KEY (schedule_date) REFERENCES schedule (schedule_date),
+	FOREIGN KEY (launch_id) REFERENCES launch (launch_id)
+);
+
+create table booked(
+	booking_id varchar(100),
+	cabin_id int,
+	PRIMARY KEY(booking_id,cabin_id),
+	FOREIGN KEY (booking_id) REFERENCES booking (booking_id),
+	FOREIGN KEY (cabin_id) REFERENCES cabin (cabin_id)
+);
+
+
+
+create table notice(
+	notice_id varchar(50),
+	notice_date date,
+	notice_heading varchar(100),
+	notice_description text,
+	PRIMARY KEY (notice_id)
+);
+
+create table offer (
+	offer_id varchar(50),
+	offer_date date,
+	offer_img varchar(500),
+	offer_description text,
+	PRIMARY KEY (offer_id)
+);
+
+create table passenger_get_offer (
+	offer_id varchar(50),
+	offer_date date,
+	offer_img varchar(500),
+	offer_description text,
+	passenger_email varchar(100),
+	PRIMARY KEY (offer_id,passenger_email),
+	FOREIGN KEY (passenger_email) REFERENCES passenger (passenger_email)
+);
+

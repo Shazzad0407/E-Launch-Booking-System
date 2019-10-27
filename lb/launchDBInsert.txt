@@ -1,0 +1,149 @@
+insert into terminal (terminal_name,terminal_latitude,terminal_longitude,zip_code) values('Dhaka','23.8103 N','90.4125 E','1000');
+insert into terminal (terminal_name,terminal_latitude,terminal_longitude,zip_code) values('Barishal','22.7010 N','90.3535 E','8200');
+insert into terminal (terminal_name,terminal_latitude,terminal_longitude,zip_code) values('Bhola','22.1785 N','90.7101 E','8300');
+insert into terminal (terminal_name,terminal_latitude,terminal_longitude,zip_code) values('Chandpur','23.2513 N','90.8518 E','3600');
+insert into terminal (terminal_name,terminal_latitude,terminal_longitude,zip_code) values('Monpura','22.1999 N','90.9534 E','8360');
+
+
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVSB-7','M V Sundorbon-7','2014-10-10','08:00 PM','04:00 AM','200','7000','1300');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVKK-4','M V Kirtonkhol-4','2010-07-07','08:30 PM','05:00 AM','200','6000','1100');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVSB-9','M V Sundorbon-9','2016-06-08','08:00 PM','04:00 AM','250','7000','1300');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVGL-2','M V Green Line-2','2016-06-06','09:00 AM','02:00 PM','700','2000','400');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVKF-9','M V Karnofuli-9','2013-03-07','08:00 PM','06:00 AM','250','7000','1100');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVKF-4','M V Karnofuli-4','2009-10-12','08:00 PM','06:00 AM','200','5500','900');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVBL-1','M V Bhola-1','2012-12-12','07:30 PM','06:00 AM','200','5500','1100');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVSN-7','M V Srinagar-7','2015-05-05','08:00 PM','06:00 AM','200','6000','1050');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVMT-3','M V Mitali-3','2010-05-11','08:00 AM','12:00 PM','100','1500','400');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVMR-7','M V Mayur-7','2016-11-11','08:00 AM','12:00 PM','100','2000','400');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVRF-5','M V Rofrof-5','2016-09-09','02:00 PM','06:00 PM','100','1000','350');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVBD-2','M V Bogdhadia-2','2015-01-01','06:00 AM','10:00 AM','100','1200','350');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVTR-1','M V Tasrif-1','2017-06-07','06:00 PM','06:00 AM','200','6500','1200');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVTR-2','M V Tasrif-2','2017-06-07','06:00 PM','06:00 AM','200','6500','1200');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVPV-2','M V Paravat-2','2011-01-01','06:30 PM','07:00 AM','200','5500','1200');
+insert into launch (launch_id,launch_name,reg_date,depTime,arrTime,low_price,high_price,capacity) values('MVTP-4','M V Tipu-4','2016-05-06','05:30 PM','06:00 AM','200','6000','1200');
+
+
+insert into route (terminal_id,launch_id) values('1','MVSB-7');
+insert into route (terminal_id,launch_id) values('2','MVSB-7');
+insert into route (terminal_id,launch_id) values('1','MVKK-4');
+insert into route (terminal_id,launch_id) values('2','MVKK-4');
+insert into route (terminal_id,launch_id) values('1','MVGL-2');
+insert into route (terminal_id,launch_id) values('2','MVGL-2');
+insert into route (terminal_id,launch_id) values('1','MVSB-9');
+insert into route (terminal_id,launch_id) values('2','MVSB-9');
+
+insert into route (terminal_id,launch_id) values('1','MVKF-9');
+insert into route (terminal_id,launch_id) values('3','MVKF-9');
+insert into route (terminal_id,launch_id) values('1','MVBL-1');
+insert into route (terminal_id,launch_id) values('3','MVBL-1');
+insert into route (terminal_id,launch_id) values('1','MVSN-7');
+insert into route (terminal_id,launch_id) values('3','MVSN-7');
+insert into route (terminal_id,launch_id) values('1','MVKF-4');
+insert into route (terminal_id,launch_id) values('3','MVKF-4');
+
+insert into route (terminal_id,launch_id) values('1','MVMT-3');
+insert into route (terminal_id,launch_id) values('4','MVMT-3');
+insert into route (terminal_id,launch_id) values('1','MVRF-5');
+insert into route (terminal_id,launch_id) values('4','MVRF-5');
+insert into route (terminal_id,launch_id) values('1','MVBD-2');
+insert into route (terminal_id,launch_id) values('4','MVBD-2');
+insert into route (terminal_id,launch_id) values('1','MVMR-7');
+insert into route (terminal_id,launch_id) values('4','MVMR-7');
+
+insert into route (terminal_id,launch_id) values('1','MVTR-1');
+insert into route (terminal_id,launch_id) values('5','MVTR-1');
+insert into route (terminal_id,launch_id) values('1','MVPV-2');
+insert into route (terminal_id,launch_id) values('5','MVPV-2');
+insert into route (terminal_id,launch_id) values('1','MVTP-4');
+insert into route (terminal_id,launch_id) values('5','MVTP-4');
+insert into route (terminal_id,launch_id) values('1','MVTR-2');
+insert into route (terminal_id,launch_id) values('5','MVTR-2');
+
+
+
+
+
+
+insert into passenger (passenger_first_name,passenger_last_name,passenger_email,passenger_password,passenger_mobile_no) values('Shahed','dd','shahed@gmail.com','111aaa','01715917130');
+insert into passenger (passenger_first_name,passenger_last_name,passenger_email,passenger_password,passenger_mobile_no) values('Saki','saki123','saki@gmail.com','222aaa','01123456789');
+insert into passenger (passenger_first_name,passenger_last_name,passenger_email,passenger_password,passenger_mobile_no) values('Ritu','rituritu','ritu@gmail.com','ritupurna','01987654321');
+insert into passenger (passenger_first_name,passenger_last_name,passenger_email,passenger_password,passenger_mobile_no) values('Ovee','shdd3','shdfxsx@gmail.com','11ggd','01713917130');
+
+
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','AC','2','1200','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','AC','2','1200','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','AC','2','1200','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','AC','3','1200','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','AC','3','1200','B','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','NON','2','1000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','NON','2','1000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','NON','3','1000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','NON','3','1000','B','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('single','NON','3','1000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','2','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','2','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','2','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','3','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','3','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','2','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','AC','2','2300','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','NON','3','2000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','NON','3','2000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('double','NON','3','2000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('VIP','AC','2','3000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('VIP','AC','3','3000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('VIP','AC','3','3000','N','MVSB-9');
+insert into cabin (cabin_type,ac_non,cabin_floor,cabin_cost,cabin_status,launch_id) values('VIP','AC','3','3000','N','MVSB-9');
+
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-01 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-02 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-04 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-05 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-07 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-08 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-10 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-11 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-13 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-14 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-16 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-17 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-19 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-20 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-22 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-23 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-25 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-26 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-28 ','MVSB-7','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-29 ','MVSB-7','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-31 ','MVSB-7','1','2');
+
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-01 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-02 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-04 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-05 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-07 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-08 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-10 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-11 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-13 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-14 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-16 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-17 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-19 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-20 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-22 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-23 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-25 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-26 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-28 ','MVKK-4','2','1');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-29 ','MVKK-4','1','2');
+insert into schedule (schedule_date,launch_id,start_terminal_id,destination_terminal_id) values('2019-01-31 ','MVKK-4','2','1');
+
+
+
+
+
+
+insert into booking (booking_id,booking_date,schedule_date,launch_id,passenger_email) values('55','2019-01-28','2019-01-26','MVKK-4','shahed@gmail.com');
+
+insert into booked (booking_id,cabin_id) values('55','5');
